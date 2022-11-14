@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+
 import {
   Container,
   Description,
@@ -27,7 +27,7 @@ export const Profile = ({
     <Container>
       <Description>
         <AvatarCover>
-          <img src={avatar} alt="User avatar" className={css.avatar} />
+          <Avatar alt="User avatar" />
         </AvatarCover>
         <Name>{username}</Name>
         <Tag>&#64;{tag}</Tag>
@@ -39,11 +39,11 @@ export const Profile = ({
           <Label>Followers</Label>
           <Quantity>{followers}</Quantity>
         </StatItem>
-        <StatItem className={css.item}>
+        <StatItem>
           <Label>Views</Label>
           <Quantity>{views}</Quantity>
         </StatItem>
-        <StatItem className={css.item}>
+        <StatItem>
           <Label>Likes</Label>
           <Quantity>{likes}</Quantity>
         </StatItem>
