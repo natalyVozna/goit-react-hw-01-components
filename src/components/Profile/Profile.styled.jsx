@@ -5,12 +5,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  background-color: var(--color-white);
+  background-color: ${props => props.theme.colors.white};
   overflow: hidden;
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
 
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms ${props => props.theme.colors.timingFunction};
 
   &:hover {
     box-shadow: 0px 0px 10px 1px rgba(33, 148, 242, 0.3);
@@ -29,8 +29,8 @@ export const AvatarCover = styled.div`
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0px 0px 6px 1px rgba(33, 148, 242, 0.3);
-  transition: transform 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+  transition: transform 250ms ${props => props.theme.colors.timingFunction},
+    box-shadow 250ms ${props => props.theme.colors.timingFunction};
   margin-bottom: 26px;
 
   &:hover {
@@ -46,7 +46,7 @@ export const Avatar = styled.img`
 `;
 
 export const Location = styled.p`
-  color: var(--title-text-color);
+  color: ${props => props.theme.colors.text};
   font-weight: 700;
   font-size: 26px;
   line-height: 1.6;
@@ -63,7 +63,7 @@ export const Text = styled.p`
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--gray-color);
+  color: ${props => props.theme.colors.gray};
 `;
 
 export const Tag = styled(Location)`
@@ -82,14 +82,14 @@ export const StatItem = styled.li`
   flex-wrap: wrap;
   padding: 26px 10px;
   background-color: rgba(33, 148, 242, 0.3);
-  border-top: 1px solid var(--gray-color);
-
+  border-top: ${props => `1px solid ${props.theme.colors.gray}
+`};
   &:not(:last-child) {
-    border-right: 1px solid var(--gray-color);
-  }
+    border-right: ${props => `1px solid ${props.theme.colors.gray}`};
 `;
 export const Label = styled.span`
-  color: var(--title-text-color);
+  // color: ${props => props.theme.colors.text};
+  color: ${props => props.theme.colors.text};
   font-weight: 700;
   font-size: 16px;
   line-height: 1.6;
