@@ -73,7 +73,7 @@ a {
   outline-offset: 0;
 }
 
-.rootContainer {
+/* .rootContainer {
   padding: 40px;
   height: 100%;
   display: flex;
@@ -82,4 +82,4 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 26px;
-}
+} */
