@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css';
 import { Container, Head, Cell } from './TransactionHistory.styled';
 
 function TransactionHistory({ items }) {
@@ -7,9 +6,9 @@ function TransactionHistory({ items }) {
     <Container>
       <thead>
         <tr>
-          <Head className={css.head}>Type</Head>
-          <Head className={css.head}>Amount</Head>
-          <Head className={css.head}>Currency</Head>
+          <Head>Type</Head>
+          <Head>Amount</Head>
+          <Head>Currency</Head>
         </tr>
       </thead>
 

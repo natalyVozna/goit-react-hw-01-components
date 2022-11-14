@@ -26,7 +26,7 @@ export const Head = styled.th`
 `;
 
 export const Cell = styled.td`
-  padding: 8px;
+  padding: ${props => props.theme.space[2]};
   color: #6a6c72;
   font-size: 18px;
 

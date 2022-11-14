@@ -63,7 +63,7 @@ export const Text = styled.p`
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
-  color: ${props => props.theme.colors.gray};
+  color: ${props => props.theme.colors.timingFunction};
 `;
 
 export const Tag = styled(Location)`
@@ -84,11 +84,13 @@ export const StatItem = styled.li`
   background-color: rgba(33, 148, 242, 0.3);
   border-top: ${props => `1px solid ${props.theme.colors.gray}
 `};
+
   &:not(:last-child) {
     border-right: ${props => `1px solid ${props.theme.colors.gray}`};
+  }
 `;
 export const Label = styled.span`
-  // color: ${props => props.theme.colors.text};
+  // color: var(--title-text-color);
   color: ${props => props.theme.colors.text};
   font-weight: 700;
   font-size: 16px;

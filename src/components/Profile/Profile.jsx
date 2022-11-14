@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box';
 
 import {
   Container,
@@ -24,7 +25,17 @@ export const Profile = ({
   likes,
 }) => {
   return (
-    <Container>
+    <Box
+      display="flex"
+      alignItems="center"
+      mt={5}
+      flexDirection="column"
+      borderRadius={4}
+      bg="white"
+      overflow="hidden"
+      boxShadow="0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%)"
+    >
       <Description>
         <AvatarCover>
           <Avatar src={avatar} alt="User avatar" />
@@ -48,7 +59,7 @@ export const Profile = ({
           <Quantity>{likes}</Quantity>
         </StatItem>
       </Stats>
-    </Container>
+    </Box>
   );
 };
 

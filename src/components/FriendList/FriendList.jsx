@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import FriendListItem from 'components/FriendListItem/FriendListItem';
 import { ContainerFriend } from './ FriendList.styled';
 
-function FriendList({ friends }) {
+function FriendList({ friends, icon: Icon = null }) {
   return (
     <ContainerFriend>
+      {Icon && <Icon size="16" />}
       {friends.map(({ id, avatar, name, isOnline }) => (
         <FriendListItem
           key={id}
